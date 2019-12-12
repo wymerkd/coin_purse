@@ -15,15 +15,29 @@ class Pocket
       if @coin >= 25 && @coin % 25 === 0
           @coin -= 25
           @quarters += 1
-        elsif @coin % 10
+        elsif @coin % 10 === 0 && @coin != 0
+          puts @coin
           @coin -= 10
           @dimes += 1
         end
       end
       purse = []
+      if @quarters > 1
       purse.push(@quarters)
       purse.push("quarters")
-      purse
+    elsif @quarters == 1
+      purse.push(@quarters)
+      purse.push("quarter")
+    end
+    if @dimes > 1
+    purse.push(@dimes)
+    purse.push("dimes")
+  elsif @dimes == 1
+    purse.push(@dimes)
+    purse.push("dime")
+  end
+    puts purse
+    purse
     end
 
   end

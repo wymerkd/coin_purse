@@ -8,6 +8,6 @@ describe('#coin_hash') do
   end
   # it("returns number of pennies depending on users input") do
   #   test = Pocket.new(45)
-  #   expect(test.coin_hash()).to(eq(2))
+  #   expect(test.coin_hash()).to(eq([2,"dimes",1,"quarter"]))
   # end
 end
