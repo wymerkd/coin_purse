@@ -1,7 +1,7 @@
 
 
 class Pocket
-  attr_reader(:coin, :pennies, :nickels, :dimes, :quarters)
+  attr_accessor(:coin, :pennies, :nickels, :dimes, :quarters)
 
   def initialize(coin)
     @coin = coin
@@ -56,8 +56,8 @@ class Pocket
       @purse.push(@pennies)
       @purse.push("penny")
     end
-    purse_string = @purse.join(" ")
-    purse_string
+    @purse_string = @purse.join(" ")
+    @purse_string
   end
 end
 
